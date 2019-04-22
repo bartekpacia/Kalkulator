@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.msi.kalkulator.MainActivity">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:id="@+id/editText"
+        android:hint="Wprowadź pierwszą liczbę"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:ems="10"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/editText1"
+        android:layout_toEndOf="@+id/textView2"
+        android:hint="Wprowadź drugą liczbę"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Dodawanie"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="61dp"
+        android:id="@+id/BT_Dodawanie"
+        android:layout_below="@+id/editText1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="Dodawanie"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="150dp"
+        android:backgroundTint="@android:color/holo_blue_light" />
+
+    <TextView
+        android:layout_height="50dp"
+        android:id="@+id/textView_result"
+        android:layout_width="20dp"
+        android:layout_below="@+id/editText1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:text="WYNIK "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/textView_result"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="35sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/editText1" />
+
+    <Button
+        android:text="Odejmowanie"
+        android:layout_height="wrap_content"
+        android:id="@+id/BT_Odejmowanie"
+        android:onClick="Odejmowanie"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/BT_Dodawanie"
+        android:layout_alignTop="@+id/BT_Dodawanie"
+        android:textSize="13sp"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="150dp"
+        android:backgroundTint="@android:color/holo_blue_light" />
+
+    <Button
+        android:text="Info"
+        android:layout_height="wrap_content"
+        android:id="@+id/BT_INFO"
+        android:textAlignment="center"
+        android:onClick="Info"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/background_light"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_toEndOf="@+id/BT_Potega"
+        android:layout_alignLeft="@+id/BT_Pierwiastek"
+        android:layout_alignStart="@+id/BT_Pierwiastek"
+        android:layout_width="165dp"
+        android:backgroundTint="@android:color/holo_green_light" />
+
+    <Button
+        android:text="Wyczyść"
+        android:layout_height="wrap_content"
+        android:id="@+id/BT_Clear"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/background_light"
+        android:onClick="Clear"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/BT_INFO"
+        android:layout_alignRight="@+id/BT_Potega"
+        android:layout_alignEnd="@+id/BT_Potega"
+        android:layout_width="165dp"
+        android:backgroundTint="@android:color/holo_red_light" />
+
+    <Button
+        android:text="Potęgowanie"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/BT_Potega"
+        android:textAlignment="center"
+        android:onClick="Potega"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_below="@+id/BT_Mnozenie"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp"
+        android:layout_alignRight="@+id/BT_Mnozenie"
+        android:layout_alignEnd="@+id/BT_Mnozenie"
+        android:backgroundTint="@android:color/holo_blue_light" />
+
+    <Button
+        android:text="Dzielenie"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/BT_Dzielenie"
+
+        android:onClick="Dzielenie"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_alignBaseline="@+id/BT_Mnozenie"
+        android:layout_alignBottom="@+id/BT_Mnozenie"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@android:color/holo_blue_light" />
+
+    <Button
+        android:text="Pierwiastek"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/BT_Pierwiastek"
+        android:onClick="Pierwiastek"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_alignBaseline="@+id/BT_Potega"
+        android:layout_alignBottom="@+id/BT_Potega"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@android:color/holo_blue_light" />
+
+    <Button
+        android:text="Długość okręgu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button4"
+        android:layout_alignLeft="@+id/BT_Pierwiastek"
+        android:layout_alignStart="@+id/BT_Pierwiastek"
+        android:id="@+id/button5"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="OpenObwodKola" />
+
+    <Button
+        android:text="Pole koła"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/button4"
+        android:onClick="OpenPoleKola"
+        android:layout_below="@+id/BT_Potega"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/BT_Potega"
+        android:layout_alignEnd="@+id/BT_Potega" />
+
+    <Button
+        android:text="Mnożenie"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/BT_Mnozenie"
+        android:textAlignment="center"
+        android:onClick="Mnozenie"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_marginTop="7dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:layout_below="@+id/BT_Dodawanie"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
